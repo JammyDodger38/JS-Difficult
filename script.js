@@ -1,13 +1,17 @@
-// Переменные
-let num = 266219
-let str = num.toString()
-let factorial = 1
-let str2 = ""
-for (let i = 0; i < str.length; i++)
-{
-    factorial *= Number(str[i]);
+'use strict'
+
+let str = prompt("Введите строку:");
+
+const method = function (arg) {
+    if (arg == (arg*1)) {
+        alert("Введеные данные не являются строкой");
+    } else if (typeof arg === 'string') {
+        arg = arg.trim();
+        if (arg.length > 30) {
+            arg = arg.substring(0, 30) + "...";
+        }
+        console.log(arg);
+    }
 }
 
-console.log(factorial)
-str2 = (factorial ** 3).toString();
-console.log(str2.substring(0, 2))
+method(str);
